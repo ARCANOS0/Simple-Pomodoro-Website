@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* pixel & Poppins fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+/* jersey 10 font for the timer */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+body{
+  background: url("/week 3 - pomodoro website/images/background2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Press Start 2P", serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow-y: hidden;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+nav{
+  position: fixed;
+  top: 0;
+  left: 20px;
+  font-family: "Press Start 2P", serif;
+
+}
+
+
+
+.img-logo{
+  font-family: "Pixelify sans", serif;
+  font-weight: 900;
+  display: flex;
+}
+
+.img-logo img{
+  height: 130px;
+  position: fixed;
+  z-index: 2;
+}
+
+.img-logo h1{
+  display: flex;
+  margin: 45px 110px;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+.gradient-text {
+  background-color: red;
+  background-image: linear-gradient(250deg,#db4a4d, #ab2343, #db4a4d);
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+}
+
+
+ .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  padding: 10rem 10rem;
+  border-radius: 2rem;
+  text-align: center;
+  color: white;  
+ }
+
+ .container span{
+  color: #db4a4d;
+ }
+
+ .container .title{
+  font-size: 55px;
+  font-family: "Press Start 2P", serif;
+ }
+
+ hr{
+  width: 100%;
+ }
+
+.container .timer{
+  font-size: 40px;
+  font-family: "Press Start 2P", serif;
+  margin-top: 22px;
+}
+
+.button-wrapper{
+  display: flex;
+  gap: 1rem;
+}
+
+.container .button-wrapper button{
+  padding: 1rem 2rem;
+  font-size: large;
+  border-radius: 5px;
+  margin-top: 22px ;
+}
+
+#start{
+  background-color: #2341b7;
+  transition: 0.3s ease;
+}
+
+#stop{
+  background-color: #ab2343;
+  transition: 0.3s ease;
+
+}
+#reset{
+  transition: 0.3s ease;
+}
+
+.container .button-wrapper #start:hover{
+  background: #283774;
+  color: white;
+  transform: translateY(-10px);
+}
+
+
+.container .button-wrapper #stop:hover{
+  background: #6b2938;
+  color: white;
+  transform: translateY(-10px);
+}
+
+.container .button-wrapper #reset:hover{
+  background: rgb(150, 144, 144);
+  color: white;
+  transform: translateY(-10px);
+}
+
+@media (max-width: 740px) {
+
+  .img-logo img{
+  display: none;
+  }
+
+  .img-logo h1{
+    display: none;
+  }
+
+  .container {
+    height: auto;
+    width: 100%;
+    padding: 2rem; /* Reduce padding for smaller screens */
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .container .title {
+    font-size: 30px; /* Reduce size for better fit */
+  }
+
+  .timer {
+    font-size: 30px; /* Reduce font size */
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .button-wrapper button {
+    width: 100%; /* Make buttons full width */
+  }
+}
+
+
+
+.footer-class {
+  display: flex;
+  justify-content: center; /* Centers the content */
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  color: white;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+
+
+
+.footer-class .footer-section .icon-list a:hover{
+  color: white;
+
+}
