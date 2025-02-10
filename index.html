@@ -1,95 +1,106 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Pomodoro</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+
+  <!-- minify -->
+  <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+  <!-- latest -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <!-- core style only -->
+  <link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
+
+
 
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="logo.png" type="image/x-icon">
-  <!-- bootstrap links -->
-  <link
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-  crossorigin=>
-
-  <!-- minify -->
-<link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-<!-- latest -->
-<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
-<!-- core style only -->
-<link href="https://unpkg.com/nes.css/css/nes-core.min.css" rel="stylesheet" />
-
-
-
-  <title>Simple Pomodoro</title>
 </head>
 
-<nav>
-  <div class="img-logo">
-    <img src="logo.png" alt="Pixel tomato logo">
-    <div class="col-sm-12 col-md-12">
 
-      <h1 class="gradient-text">Pomodoro</h1>
-    </div>
-  </div>
-</nav>
+<title>Simple Pomodoro</title>
 
 
 
-<body>
-  <section>
-  <div class="container">
-    <div class="col-sm-12 col-md-12">
-      <h1 class="title">Start Your <span>Pomodoro</span> </h1>
-    </div>
+</head>
 
-    <hr class="break">
-    <p class="timer" id="timer">50:00</p>
-    <div class="button-wrapper">
-      <div class="col-sm-12 col-md-12">
-      <button id="start" type="button" class="nes-btn">Start</button>
-      <button id="stop" type="button" class="nes-btn">Stop</button>
-      <button id="reset" type="button" class="nes-btn">Reset</button>
-    </div>
-  </div>
-  </div>
-  </section>
-<br>
-  
-
-<footer class="footer-class ">
-    <section class="footer-section">
-        <div class="icon-list">
-         <a href="https://www.instagram.com/shiraga_00/"><i class="nes-icon instagram is-medium"></i></a>
-         <a href="https://github.com/ARCANOS0"><i class="nes-icon github is-medium"></i></a>
-         <a href="#"></i></a>
+<body class="dark-mode">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand gradient-text" href="index.html">Pomodoro</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="pomodoro.html">What Is Pomodoro?</a>
+            <a class="nav-link disabled " aria-disabled="true">Donate$</a>
+            <button id="switch-theme">
+              <img style="height: 40px;" src="/img/dark-mode.svg" alt="">
+              <img style="height: 40px;" src="/img/sun.svg" alt="">
+          </div>
         </div>
       </div>
-    </section>
+    </nav>
+  </header>
+
+
+
+
+  <main class="container">
+    <section class="pt-5">
+      <div class="container">
+        <div class="col-sm-12 col-md-12">
+          <h1 class="title">Start Your <span>Pomodoro</span> </h1>
+        </div>
+
+        <hr class="break">
+        <label for="minutes">Set Time:</label>
+        <div id="time-input-wrapper"> <!-- Wrapper for inputs -->
+          <input type="number" id="minutes" placeholder="MM" min="0" max="99">
+          <span>:</span>
+          <input type="number" id="seconds" placeholder="SS" min="0" max="59">
+        </div>
+        
+        <h2 id="timer-display" style="display: none;">00 : 00</h2> <!-- Hidden Timer Display -->
+        
+        <div class="button-wrapper">
+          <button id="start" class="nes-btn is-primary">Start</button>
+          <button id="stop" class="nes-btn is-error">Stop</button>
+          <button id="reset" class="nes-btn">Reset</button>
+        </div>
+        
+
+
+  </main>
+
+  <footer class="footer-class">
+
+    <a class="nav-link" href="https://github.com/ARCANOS0"><i class="nes-icon github is-medium"></i> </a>
+    <a class="nav-link" href="#"><i class="nes-icon instagram is-medium"></i> </a>
+
   </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 
 
-
-
-
-
-
-  <script
-  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-  crossorigin="anonymous"
-></script>
-
-<script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-  integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-  crossorigin="anonymous"
-></script>
-
-
-<!-- link of the main JS code -->
-
-<script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
+
 </html>
