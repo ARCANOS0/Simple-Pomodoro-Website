@@ -5,7 +5,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  cursor: url("/week 3 - pomodoro website/images/cursor.cur"), auto;
+  cursor: url("cursor.cur"), auto;
 
 }
 
@@ -15,7 +15,7 @@
 }
 
 body {
-  background: url("/week 3 - pomodoro website/images/background2.jpeg");
+  background: url("background2.jpeg");
   background-size: cover;
   background-position: center;
   font-family: "Press Start 2P", serif;
@@ -30,7 +30,7 @@ body {
 /* dark mode */
 
 .dark-mode {
-  background: url("/week 3 - pomodoro website/images/dark-background.jpeg");
+  background: url("/img/dark-background.jpeg");
   background-size: cover;
   background-position: center;
 }
