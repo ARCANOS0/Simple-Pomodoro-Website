@@ -30,7 +30,7 @@ body {
 /* dark mode */
 
 .dark-mode {
-  background: url("/img/dark-background.jpeg");
+  background: url("dark-background.jpeg");
   background-size: cover;
   background-position: center;
 }
